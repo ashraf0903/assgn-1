@@ -3,27 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Modern Profile | Assignment 1</title>
+    <style>
+        /* CSS: Styling the page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.95);
+            width: 350px;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #2d3436;
+        }
+
+        .title {
+            color: #6c5ce7;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .bio {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #636e72;
+            margin-bottom: 25px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .primary {
+            background: #6c5ce7;
+            color: white;
+        }
+
+        .primary:hover {
+            background: #a29bfe;
+            transform: translateY(-2px);
+        }
+
+        .secondary {
+            border: 2px solid #6c5ce7;
+            color: #6c5ce7;
+        }
+
+        .secondary:hover {
+            background: #f8f9fa;
+        }
+    </style>
 </head>
 <body>
-    <div class="profile-card">
-        <img src="https://placeholder.com" alt="Profile Picture" class="profile-img">
-        <h1>Srivarsha</h1>
-        <p class="tagline">Aspiring Web Developer & Tech Enthusiast</p>
-        
-        <div class="skills">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-        </div>
 
-        <p class="bio">Building clean, modern web experiences one line of code at a time.</p>
+    <!-- HTML: The content of your card -->
+    <div class="profile-card">
+        <!-- Placeholder image: replace the seed name "Felix" for a different character -->
+        <img src="https://dicebear.com" alt="Profile Avatar" class="profile-img">
         
-        <div class="links">
-            <a href="#" class="btn primary">View Projects</a>
-            <a href="https://github.com" class="btn secondary">GitHub</a>
+        <h1>Your Name</h1>
+        <p class="title">Frontend Developer</p>
+        
+        <p class="bio">
+            I am a student learning how to build modern, responsive websites using HTML, CSS, and JavaScript. 
+            Passionate about clean design and user experience.
+        </p>
+
+        <div class="social-links">
+            <a href="#" class="btn primary" id="contactBtn">Contact Me</a>
+            <a href="https://github.com" target="_blank" class="btn secondary">GitHub</a>
         </div>
     </div>
+
+    <script>
+        /* JavaScript: Adding interactivity */
+        const contactBtn = document.getElementById('contactBtn');
+        contactBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('This is where your contact form or email would go!');
+        });
+    </script>
+
 </body>
 </html>
